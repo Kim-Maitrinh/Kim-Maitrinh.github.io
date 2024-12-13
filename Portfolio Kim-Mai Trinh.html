@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Kim-Mai Trinh</title>
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <!-- meta description -->
+  <meta name="description" content="Portfolio de Kim-Mai Trinh, designer graphique.">
+  <link rel="stylesheet" href="https://use.typekit.net/ezv1csk.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <!-- https://jenseign.com/le-h1-logo/ -->
+    <h1><a href="index.html"><img src="faviconblanc.svg" alt="Kim-Mai Trinh" width="50" height="50"></a></h1>
+
+    <nav class="header-nav">
+      <a href="a-propos.html">⎮à propos⎮ </a>
+      <a href="https://instagram.com/modulofont">⎮instagram</a>
+    </nav>
+  </header>
+
+  <div class="projets">
+    <a href="coffret.html" class="projet">
+      <img src="img/coffret copie.jpg" alt="Coffret">
+      <h2>Coffret</h2>
+    </a>
+    <a href="livres.html" class="projet">
+      <img src="img/éditionmode copie.jpg" alt="livres">
+      <h2>Livres</h2>
+    </a>
+    <a href="Collection.html" class="projet">
+      <img src="img/scantickets copie.jpg" alt="Collection">
+      <h2>Collection</h2>
+    </a>
+    <a href="magasine.html" class="projet">
+      <img src="img/magasinetokyo copie.jpg" alt="Magasine">
+      <h2>Magasine</h2>
+    </a>
+    <a href="spécimen.html" class="projet">
+      <img src="img/pilowlava30 copie 2.jpg" alt="spécimen">
+      <h2>spécimen</h2> 
+    </a>
+    <a href="livres.html" class="projet">
+      <img src="img/livres.jpg" alt="livres">
+      <h2>Livres</h2>
+    </a>
+    <a href="musee.html" class="projet">
+      <img src="img/musee.jpg" alt="Musée">
+      <h2>Musée</h2>
+    </a>
+    <a href="restaurant.html" class="projet projet-xl">
+      <img src="img/restaurant.jpg" alt="Restaurant">
+      <h2>Restaurant</h2>
+    </a>
+    <a href="voyage.html" class="projet">
+      <img src="img/voyage.jpg" alt="Voyage">
+      <h2>Voyage</h2> 
+    </a>
+    <a href="livres.html" class="projet">
+      <img src="img/livres.jpg" alt="livres">
+      <h2>Livres</h2>
+    </a>
+    <a href="musee.html" class="projet projet-xl">
+      <img src="img/musee.jpg" alt="Musée">
+      <h2>Musée</h2>
+    </a>
+    <a href="poster.html" class="projet">
+      <img src="img/poster60X80 copie.jpg" alt="poter">
+      <h2>Poster</h2>
+    </a>
+    <a href="voyage.html" class="projet">
+      <img src="img/voyage.jpg" alt="Voyage">
+      <h2>Voyage</h2> 
+    </a>
+    <a href="livres.html" class="projet">
+      <img src="img/livres.jpg" alt="livres">
+      <h2>Livres</h2>
+    </a>
+    <a href="musee.html" class="projet">
+      <img src="img/musee.jpg" alt="Musée">
+      <h2>Musée</h2>
+    </a>
+    <a href="Poster.html" class="projet">
+      <img src="img/poster60X80 copie.jpg" alt="Poster">
+      <h2>Poster</h2>
+    </a>
+    <a href="voyage.html" class="projet">
+      <img src="img/voyage.jpg" alt="Voyage">
+      <h2>Voyage</h2> 
+    </a>
+  </div>
+
+  <script>
+    const projets = document.querySelectorAll('.projet');
+    projets.forEach(projet => {
+      projet.addEventListener('mouseover', () => {
+        projets.forEach(p => p.classList.add('unactive'));
+        projet.classList.remove('unactive');
+      });
+      projet.addEventListener('mouseout', () => {
+        projets.forEach(p => p.classList.remove('unactive'));
+      });
+    });
+  </script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
